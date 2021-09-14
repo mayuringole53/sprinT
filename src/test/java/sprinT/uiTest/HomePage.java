@@ -1,13 +1,10 @@
 package sprinT.uiTest;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import configuration.BaseFramework;
 import loggerlogall.DataLogger;
-import sprinT.utilities.Elements;
 import sprinT.utilities.WebElementActions;
 
 public class HomePage extends BaseFramework {
