@@ -7,12 +7,12 @@ import loggerlogall.DataLogger;
 import sprinT.utilities.WebElementActions;
 
 public class ForgetUsername extends BaseFramework {
-	public static final Logger l = Logger.getLogger(DataLogger.class.getName());
+	public static final Logger LOG = Logger.getLogger(DataLogger.class.getName());
 
 	@Test
-	public void VerifyHomePageTitle() {
+	public void VerifyHomePageTitle1() {
 		WebElementActions.driver.get("https://duckduckgo.com/");
 		getCurrentPageTitle("DuckDuckGo — Privacy, simplified.");
-		l.info("DuckDuckGo Title Matched");
+		LOG.info("DuckDuckGo Title Matched");
 	}
 }
