@@ -11,8 +11,8 @@ public class ForgetUsername extends BaseFramework {
 
 	@Test
 	public void VerifyHomePageTitle1() {
-		WebElementActions.driver.get("https://duckduckgo.com/");
-		getCurrentPageTitle("DuckDuckGo — Privacy, simplified.");
-		LOG.info("DuckDuckGo Title Matched");
+		WebElementActions.driver.get("https://google.com/");
+		getCurrentPageTitle("Google");
+		LOG.info("Google");
 	}
 }
