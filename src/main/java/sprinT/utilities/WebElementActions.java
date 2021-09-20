@@ -9,6 +9,8 @@ import javax.imageio.ImageIO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -104,4 +106,45 @@ public class WebElementActions {
 		ss.takeScreenshot(driver, element);
 		saveScreenShot(img);
 	}
+	
+	/**
+	 * This method will take ScreenShot of a given WebElement
+	 * 
+	 * @param element
+	 * @throws IOException
+	 */
+	public void takeScreenShotOfElement(String locatorType, String locatorValue) throws IOException {
+		WebElement element = Elements.getElement(locatorType, locatorValue);
+		AShot ss = new AShot();
+		BufferedImage img = ss.shootingStrategy(ShootingStrategies.viewportPasting(500)).takeScreenshot(driver)
+				.getImage();
+		ss.takeScreenshot(driver, element);
+		saveScreenShot(img);
+	}
+	
+
+	/**
+	 * This method will select a value from a DropDownList
+	 * @param element
+	 * @param value
+	 */
+	public void selectValueFromDropDownList(WebElement element , String value) {
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+	
+	/**
+	 * This method will select a value from a DropDownList 
+	 * @param locatorType
+	 * @param locatorValue
+	 * @param value
+	 */
+	public void selectValueFromDropDownList(String locatorType, String locatorValue , String value) {
+		WebElement element = Elements.getElement(locatorType, locatorValue);
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+	
+	
+	
 }
