@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sprinT.uiTest.HomePage">
+      <class name="com.ydcc.tests.HomePageTests">
         <methods>
-          <include name="VerifyHomePageTitle"/>
           <include name="openBrowser"/>
-          <include name="getlogger"/>
           <include name="closeBrowser"/>
+          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- sprinT.uiTest.HomePage -->
+      </class> <!-- com.ydcc.tests.HomePageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

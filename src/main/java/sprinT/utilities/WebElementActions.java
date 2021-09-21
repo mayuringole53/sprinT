@@ -1,5 +1,7 @@
 package sprinT.utilities;
 
+import static org.testng.Assert.assertEquals;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -10,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
@@ -25,7 +28,7 @@ public class WebElementActions {
 	 * @param browserName
 	 * @return driver
 	 */
-	public static WebDriver browsers(String browserName) {
+	public static void browsers(String browserName , String url) {
 		switch (browserName) {
 		case "Chrome":
 			WebDriverManager.chromedriver().setup();
@@ -38,7 +41,8 @@ public class WebElementActions {
 		default:
 			break;
 		}
-		return driver;
+		driver.manage().window().maximize();
+		driver.get(url);
 	}
 
 	/**
@@ -143,6 +147,10 @@ public class WebElementActions {
 		WebElement element = Elements.getElement(locatorType, locatorValue);
 		Select select = new Select(element);
 		select.selectByValue(value);
+	}
+	
+	public void verifyTitle(String expectedTitle) {
+		Assert.assertEquals(driver.getTitle(), expectedTitle, "Title not matched !");
 	}
 	
 	
