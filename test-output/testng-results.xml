@@ -1,61 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-22T04:48:14Z" name="Default suite" finished-at="2021-09-22T04:48:59Z" duration-ms="45456">
+  <suite started-at="2021-09-22T11:06:31Z" name="Default suite" finished-at="2021-09-22T11:08:03Z" duration-ms="91994">
     <groups>
     </groups>
-    <test started-at="2021-09-22T04:48:14Z" name="Default test" finished-at="2021-09-22T04:48:59Z" duration-ms="45456">
-      <class name="com.ydcc.tests.HomePageTests">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:14Z" name="openBrowser" finished-at="2021-09-22T04:48:25Z" duration-ms="11165" status="PASS">
+    <test started-at="2021-09-22T11:06:31Z" name="Default test" finished-at="2021-09-22T11:08:03Z" duration-ms="91994">
+      <class name="com.ydcc.tests.EducationalDetailsTests">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.ydcc.tests.EducationalDetailsTests@302f7971]" started-at="2021-09-22T11:06:31Z" name="openBrowser" finished-at="2021-09-22T11:07:48Z" duration-ms="77225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="verifyForgetPasswordLink()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:25Z" name="verifyForgetPasswordLink" finished-at="2021-09-22T04:48:27Z" duration-ms="1857" status="PASS">
+        <test-method signature="addEducationDetails()[pri:0, instance:com.ydcc.tests.EducationalDetailsTests@302f7971]" started-at="2021-09-22T11:07:48Z" name="addEducationDetails" finished-at="2021-09-22T11:07:58Z" duration-ms="9304" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyForgetPasswordLink -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:27Z" name="closeBrowser" finished-at="2021-09-22T04:48:28Z" duration-ms="905" status="PASS">
+        </test-method> <!-- addEducationDetails -->
+        <test-method signature="addTypingDetails()[pri:0, instance:com.ydcc.tests.EducationalDetailsTests@302f7971]" started-at="2021-09-22T11:07:58Z" name="addTypingDetails" finished-at="2021-09-22T11:07:58Z" duration-ms="719" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:28Z" name="openBrowser" finished-at="2021-09-22T04:48:36Z" duration-ms="7930" status="PASS">
+        </test-method> <!-- addTypingDetails -->
+        <test-method signature="addWorkExperience()[pri:0, instance:com.ydcc.tests.EducationalDetailsTests@302f7971]" started-at="2021-09-22T11:07:58Z" name="addWorkExperience" finished-at="2021-09-22T11:08:02Z" duration-ms="3925" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="verifyForgetUserNameLink()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:36Z" name="verifyForgetUserNameLink" finished-at="2021-09-22T04:48:38Z" duration-ms="1842" status="PASS">
+        </test-method> <!-- addWorkExperience -->
+        <test-method signature="clickOnOKBtn()[pri:0, instance:com.ydcc.tests.EducationalDetailsTests@302f7971]" started-at="2021-09-22T11:08:02Z" name="clickOnOKBtn" finished-at="2021-09-22T11:08:03Z" duration-ms="364" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyForgetUserNameLink -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:38Z" name="closeBrowser" finished-at="2021-09-22T04:48:39Z" duration-ms="919" status="PASS">
+        </test-method> <!-- clickOnOKBtn -->
+        <test-method signature="clickOnVaeifyBtn()[pri:0, instance:com.ydcc.tests.EducationalDetailsTests@302f7971]" started-at="2021-09-22T11:08:03Z" name="clickOnVaeifyBtn" finished-at="2021-09-22T11:08:03Z" duration-ms="349" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:39Z" name="openBrowser" finished-at="2021-09-22T04:48:45Z" duration-ms="6717" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="verifyLogin()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:45Z" name="verifyLogin" finished-at="2021-09-22T04:48:49Z" duration-ms="3199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:49Z" name="closeBrowser" finished-at="2021-09-22T04:48:50Z" duration-ms="902" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:50Z" name="openBrowser" finished-at="2021-09-22T04:48:56Z" duration-ms="6552" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="verifyNewRegistrationButton()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:56Z" name="verifyNewRegistrationButton" finished-at="2021-09-22T04:48:59Z" duration-ms="2477" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNewRegistrationButton -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.ydcc.tests.HomePageTests@53251a66]" started-at="2021-09-22T04:48:59Z" name="closeBrowser" finished-at="2021-09-22T04:48:59Z" duration-ms="909" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.ydcc.tests.HomePageTests -->
+        </test-method> <!-- clickOnVaeifyBtn -->
+      </class> <!-- com.ydcc.tests.EducationalDetailsTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
