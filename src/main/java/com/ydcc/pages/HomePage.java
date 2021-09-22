@@ -6,34 +6,34 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
 	WebDriver driver;
+
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	@FindBy(xpath = "//*[contains(text(),'New Registration')]")
-	 WebElement clickForNewRegistrationBtn;
+	WebElement clickForNewRegistrationBtn;
 
 	@FindBy(xpath = "//div[@class='text-center ref-docuemnt']/p/a[@href='/how-to-apply']")
-	 WebElement howToApplyLink;
+	WebElement howToApplyLink;
 
 	@FindBy(css = "a[href*='advertise']")
-	 WebElement advertisementLink;
+	WebElement advertisementLink;
 
 	@FindBy(css = "input[placeholder*='Username']")
-	 WebElement userNameTxtBx;
+	WebElement userNameTxtBx;
 
 	@FindBy(css = "input[type=password]")
-	 WebElement passwordTxtBx;
+	WebElement passwordTxtBx;
 
 	@FindBy(css = "button[type=submit]")
-	 WebElement signInBtn;
+	WebElement signInBtn;
 
 	@FindBy(xpath = "//*[contains(text(),'Forget Username')]")
-	 WebElement forgetUserNameLink;
+	WebElement forgetUserNameLink;
 
 	@FindBy(xpath = "//*[contains(text(),'Forget Password')]")
-	 WebElement forgetPasswordLink;
-
+	WebElement forgetPasswordLink;
 
 	public void clickOnHowToApplyLink() {
 		howToApplyLink.click();
@@ -50,15 +50,15 @@ public class HomePage {
 	public void clickOnForgetPasswordLink() {
 		forgetPasswordLink.click();
 	}
-	
+
 	public void enterUserName(String userName) {
 		userNameTxtBx.sendKeys(userName);
 	}
-	
+
 	public void enterPassword(String password) {
 		passwordTxtBx.sendKeys(password);
 	}
-	
+
 	public void clickOnSignInBtn() {
 		signInBtn.click();
 	}
