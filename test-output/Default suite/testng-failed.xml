@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ydcc.tests.HomePageTests">
+      <class name="com.ydcc.tests.EducationalDetailsTests">
         <methods>
+          <include name="clickOnVaeifyBtn"/>
           <include name="openBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- com.ydcc.tests.HomePageTests -->
+      </class> <!-- com.ydcc.tests.EducationalDetailsTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
