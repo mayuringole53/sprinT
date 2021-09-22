@@ -1,7 +1,5 @@
 package sprinT.utilities;
 
-import static org.testng.Assert.assertEquals;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +26,7 @@ public class WebElementActions {
 	 * @param browserName
 	 * @return driver
 	 */
-	public static void browsers(String browserName , String url) {
+	public static void browsers(String browserName, String url) {
 		switch (browserName) {
 		case "Chrome":
 			WebDriverManager.chromedriver().setup();
@@ -110,7 +108,7 @@ public class WebElementActions {
 		ss.takeScreenshot(driver, element);
 		saveScreenShot(img);
 	}
-	
+
 	/**
 	 * This method will take ScreenShot of a given WebElement
 	 * 
@@ -125,34 +123,33 @@ public class WebElementActions {
 		ss.takeScreenshot(driver, element);
 		saveScreenShot(img);
 	}
-	
 
 	/**
 	 * This method will select a value from a DropDownList
+	 * 
 	 * @param element
 	 * @param value
 	 */
-	public void selectValueFromDropDownList(WebElement element , String value) {
+	public void selectValueFromDropDownList(WebElement element, String value) {
 		Select select = new Select(element);
 		select.selectByValue(value);
 	}
-	
+
 	/**
-	 * This method will select a value from a DropDownList 
+	 * This method will select a value from a DropDownList
+	 * 
 	 * @param locatorType
 	 * @param locatorValue
 	 * @param value
 	 */
-	public void selectValueFromDropDownList(String locatorType, String locatorValue , String value) {
+	public void selectValueFromDropDownList(String locatorType, String locatorValue, String value) {
 		WebElement element = Elements.getElement(locatorType, locatorValue);
 		Select select = new Select(element);
 		select.selectByValue(value);
 	}
-	
+
 	public void verifyTitle(String expectedTitle) {
 		Assert.assertEquals(driver.getTitle(), expectedTitle, "Title not matched !");
 	}
-	
-	
-	
+
 }
