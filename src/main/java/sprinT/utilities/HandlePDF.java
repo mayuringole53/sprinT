@@ -23,46 +23,6 @@ public class HandlePDF extends WebElementActions {
 	static Logger l = DataLogger.l;
 
 	/**
-	 * specify the url of the pdf file
-	 * 
-	 * @param url
-	 * @param content
-	 */
-	public static void verifyContentInPDf(String url, String content) {
-
-		driver.get(url);
-		try {
-			String pdfContent = readPdfContent(url);
-			Assert.assertTrue(pdfContent.contains(content));
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Read the PDF content
-	 * 
-	 * @param url
-	 * @return
-	 * @throws IOException
-	 */
-	private static String readPdfContent(String url) throws IOException {
-
-		URL pdfUrl = new URL(url);
-		InputStream in = pdfUrl.openStream();
-		BufferedInputStream bf = new BufferedInputStream(in);
-		PDDocument doc = PDDocument.load(bf);
-		int numberOfPages = getPageCount(doc);
-		l.info("The total number of pages " + numberOfPages);
-		String content = new PDFTextStripper().getText(doc);
-		doc.close();
-
-		return content;
-	}
-
-	/**
 	 * get the total number of pages in the pdf document
 	 * 
 	 * @param doc
@@ -91,7 +51,7 @@ public class HandlePDF extends WebElementActions {
 		return numberOfPages;
 	}
 
-	public void setUpForDownload() {
+	public static void setUpForDownload() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shalini\\Downloads\\Driver\\chromedriver.exe");
 
 		ChromeOptions options = new ChromeOptions();
@@ -108,7 +68,7 @@ public class HandlePDF extends WebElementActions {
 	 * @param locatorType
 	 * @param locatorValue
 	 */
-	public void downloadPdf(String url, String locatorType, String locatorValue) {
+	public static void downloadPdf(String url, String locatorType, String locatorValue) {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(url);

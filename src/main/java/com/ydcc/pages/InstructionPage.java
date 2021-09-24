@@ -24,7 +24,7 @@ public class InstructionPage {
 	WebElement officialSiteLink;
 
 	@FindBy(css = "input#i-agree")
-	WebElement iAgreeCheckBox;
+	WebElement iAgreeChkBx;
 
 	@FindBy(css = "button#proccessNewReg")
 	WebElement clickHereToProceedBtn;
@@ -45,8 +45,8 @@ public class InstructionPage {
 		officialSiteLink.click();
 	}
 
-	public void TickIAgreeCheckBox() {
-		iAgreeCheckBox.click();
+	public void tickIAgreeCheckBox() {
+		iAgreeChkBx.click();
 	}
 
 	public void clickOnClickHereToProceedBtn() {
