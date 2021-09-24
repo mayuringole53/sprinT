@@ -17,7 +17,7 @@ import sprinT.utilities.WebElementActions;
 public class InstructionPageTests extends BaseFramework {
 	WebElementActions act = new WebElementActions();
 
-	@Test
+	@Test(enabled = false)
 	public void verifyHomeBtn() {
 		InstructionPage inst = PageFactory.initElements(WebElementActions.driver, InstructionPage.class);
 		inst.clickOnHomeBtn();
@@ -29,33 +29,22 @@ public class InstructionPageTests extends BaseFramework {
 		InstructionPage inst = PageFactory.initElements(WebElementActions.driver, InstructionPage.class);
 		inst.clickOnViewInformationBulletinBtn();
 		Thread.sleep(1000);
-		//HandlePDF.getPageCountUsingURL("http://143.110.249.55/recruitment-advertisement.pdf");
-		
-//		URL pdfUrl = new URL("http://143.110.249.55/recruitment-advertisement.pdf");
-//		InputStream in = pdfUrl.openStream();
-//		BufferedInputStream bf = new BufferedInputStream(in);
-//		PDDocument doc = PDDocument.load(bf);
-//		int numberOfPages = getPageCount(doc);
-//		System.out.println("The total number of pages " + numberOfPages);
+		int pagescount = HandlePDF.getPageCountUsingURL("http://143.110.249.55/recruitment-advertisement.pdf");
+		System.out.println("Number of pages: "+pagescount);
 	}
-//	private static int getPageCount(PDDocument doc) {
-//		int pageCount = doc.getNumberOfPages();
-//		return pageCount;
-//	}
 
-	@Test
+	@Test(enabled = false)
 	public void officialSiteLink() throws InterruptedException {
 		InstructionPage inst = PageFactory.initElements(WebElementActions.driver, InstructionPage.class);
 		inst.clickOnOfficialSiteLink();
 		Thread.sleep(1000);
-		act.verifyTitle("Instruction Page");
-		//act.verifyTitle("www.ydcc.in");
+		act.verifyTitle("Yavatmal District Central Co-Operative Bank Limited");
 	}
 
 	@Test
 	public void verifyToProceedNewRegistration() throws InterruptedException {
 		InstructionPage inst = PageFactory.initElements(WebElementActions.driver, InstructionPage.class);
-		inst.TickIAgreeCheckBox();
+		inst.tickIAgreeCheckBox();
 		Thread.sleep(1000);
 		inst.clickOnClickHereToProceedBtn();
 		Thread.sleep(1000);
@@ -65,9 +54,7 @@ public class InstructionPageTests extends BaseFramework {
 
 	@Test(enabled = false)
 	public void demoOfDownloadPDF() throws InterruptedException {
-		HandlePDF hp = new HandlePDF();
-		Thread.sleep(2000);
-		hp.downloadPdf("https://git-scm.com/book/en/v2", "xpath",
+		HandlePDF.downloadPdf("https://git-scm.com/book/en/v2", "xpath",
 				"//a[@href = 'https://github.com/progit/progit2/releases/download/2.1.331/progit.pdf']");
 	}
 }

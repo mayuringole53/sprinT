@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="sprinT.uiTest.HomePage"/>
-      <class name="sprinT.uiTest.ForgetUsername"/>
+      <class name="com.ydcc.tests.InstructionPageTests"/>
+      <class name="com.ydcc.tests.EducationalDetailsTests"/>
+      <class name="com.ydcc.tests.NewUserRegistrationPageTests"/>
+      <class name="com.ydcc.tests.HomePageTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
