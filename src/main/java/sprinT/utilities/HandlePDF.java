@@ -3,7 +3,6 @@ package sprinT.utilities;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +10,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -51,6 +49,11 @@ public class HandlePDF extends WebElementActions {
 		return numberOfPages;
 	}
 
+	public static void testVerifyPDFInURL() {
+		String getURL = driver.getCurrentUrl();
+		Assert.assertTrue(getURL.contains(".pdf"));
+	}
+	
 	public static void setUpForDownload() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shalini\\Downloads\\Driver\\chromedriver.exe");
 

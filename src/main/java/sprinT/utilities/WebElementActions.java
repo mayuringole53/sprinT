@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
+
 import javax.imageio.ImageIO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -152,4 +154,14 @@ public class WebElementActions {
 		Assert.assertEquals(driver.getTitle(), expectedTitle, "Title not matched !");
 	}
 
+	public void switchwindow() throws InterruptedException {
+		String mainWindow = driver.getWindowHandle();
+		Set<String> handles = driver.getWindowHandles();
+		for (String handle : handles) {
+			if (!handle.equals(mainWindow)) {
+				driver.switchTo().window(handle);
+				break;
+			}
+		}
+	}
 }

@@ -11,7 +11,7 @@ import sprinT.utilities.WebElementActions;
 public class NewUserRegistrationPageTests extends BaseFramework {
 	WebElementActions act = new WebElementActions();
 
-	@Test
+	@Test(groups = { "Smoke" })
 	public void verifyDetailsOnNewUserRegPage() {
 		NewUserRegistrationPage newRegPage = PageFactory.initElements(WebElementActions.driver,
 				NewUserRegistrationPage.class);
@@ -35,10 +35,9 @@ public class NewUserRegistrationPageTests extends BaseFramework {
 		newRegPage.clickOnVerifyDetailsBtn();
 		// check pop up message.
 		newRegPage.confirmPopupAfterVerifyDetailsBtn();
-
+		act.verifyTitle("New User Registration");
 		newRegPage.clickOnSubmitBtn();
 		newRegPage.confirmPopupAfterSubmitBtn();
 		
-		act.verifyTitle("New User Registration");
 	}
 }
